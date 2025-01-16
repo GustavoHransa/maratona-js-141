@@ -3,22 +3,66 @@ Descrição:
 Peça ao usuário dois números e exiba a soma deles.
 Tarefas:
 Crie uma função soma que receba dois números como parâmetros.
-Exiba o resultado no console ou em um alert.
+Exiba o resultado no console ou em um alert.*/
 
+   function soma(){
+
+            let num1 = parseInt(document.getElementById("n1").value);
+            let num2 = parseInt(document.getElementById("n2").value);
+            let soma = num1+num2;
+            alert(soma);
+            
+        }
+
+
+   /*
 2. Verificação de Par ou Ímpar
 Descrição:
 Peça ao usuário um número e diga se ele é par ou ímpar.
 Tarefas:
 Crie uma função que receba um número.
 Verifique se o número é divisível por 2.
-Exiba no console "O número é par" ou "O número é ímpar".
+Exiba no console "O número é par" ou "O número é ímpar".*/
 
+
+
+function parImpar(){
+
+    let num3 = parseInt(document.getElementById("n3").value);
+    let total=num3/2;
+    if(num3%2 == 0){
+        alert("Par");
+    }else{
+        alert("Impar");
+    }
+    
+}
+
+
+/*
 3. Contagem de Números
 Descrição:
 Exiba os números de 1 a 10 usando um loop.
 Tarefas:
 Utilize um loop for para imprimir os números no console.
 Modifique o exercício para usar um while.
+
+
+*/
+function Loop(){
+    
+    let output = "";
+    for (let i = 1; i <= 10; i++) {
+        output += i; 
+        if (i < 10) {
+            output += ",";
+        }
+    }
+    alert(output);
+
+    }
+
+/*
 
 4. Tabuada de um Número
 Descrição:
@@ -27,6 +71,33 @@ Tarefas:
 Peça ao usuário um número.
 Use um loop for para multiplicar o número de 1 a 10.
 Exiba o resultado no console.
+
+*/
+
+function calcularTabuada() {
+    
+    const numero = parseInt(document.getElementById("n4").value);
+    const resultado = document.getElementById("resultado");
+
+    
+    resultado.innerHTML = "";
+
+  
+    if (isNaN(numero)) {
+        resultado.innerHTML = "Por favor, digite um número válido.";
+        return;
+    }
+    
+    for (let i = 1; i <= 10; i++) {
+        resultado.innerHTML += `${numero} x ${i} = ${numero * i}<br>`;
+    }
+}
+
+
+/*
+
+
+
 
 5. Encontrar o Maior Número em uma Lista
 Descrição:
